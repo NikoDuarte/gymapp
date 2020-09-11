@@ -1,0 +1,24 @@
+.ok {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-style: 14px;
+    width: 600px;
+    border-radius: 7px;
+    padding: 12px;
+    background-color: #5bec48;
+	color: #fff;
+}
+
+
+  .bad {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-style: 14px;
+    width: 600px;
+    border-radius: 7px;
+    padding: 12px;
+    background-color: #a22;
+    color: #ffffff;
+	z-index: 10;
+	transition: 1.5s;
+  }

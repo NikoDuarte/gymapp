@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRO USUARIO | GYMAPP </title>
+     <!----------logo------------>
+     <link rel="icon" href="https://i.ibb.co/7bxtrvw/GYMAPP-Convert-Image.png">
+     <!------------------------->
+     <!-- CSS only -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body  style="background: red; background: linear-gradient(to right, #61aa56a8, #1290e4);">
+  <!-- Navigation -->
+  <nav  class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <a href="inicio GYMAPP.html"><b><font color="green">GYMAPP</font> </b> </a>
+    <div  class="container" >
+        <a  class="navbar-brand" href="inicio GYMAPP.html">
+            <!------------------------------ LOGO ------------------------------------------>
+            <img style="width: 60px;"  src="https://i.ibb.co/7bxtrvw/GYMAPP-Convert-Image.png" style="width: 7rem;">
+            <!------------------------------------------------------------------------------>
+        </a>
+        <a style="text-align: left;" href="inicio GYMAPP.html"><b>Pagina Inicial</b> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+  </nav>
+    <!---------------------------------registro------------------------------------------->
+    <div class="container" style=" margin-top: 6%;">
+        <div class="row">
+          <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5" style="border: 0; border: radius 1rem; box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1); background-color: #5bec48;">
+              <div class="card-body" style="padding: 2rem;">
+                <h5 class="card-title text-center" style="margin-bottom: 2rem; font-weight: 300; font-size: 1.5rem; color: white; font-weight: bold;"><font face="sans-serif">GYMAPP <br>FORMULARIO DE REGISTRO DE USUARIO</font></h5>
+                <div class="alert alert-info" role="alert">
+                  <center>
+                    <SMall>
+                      Señor usuario  lea con atencion el formulario <br> y complete todos los espacios solicitados
+                    </SMall>
+                  </center>
+                </div> 
+                <br>
+                    <form class="form-signin" style="width: 100%;" method="POST" action="php/insertUser.php">
+                        <div class="form-group">
+                            <label for="name">NOMBRE Y APELLIDO COMPLETO: </label>
+                            <input name="nomUser" type="text" class="form-control" placeholder="Ingrese su nombre ">
+                        </div>
+                        <p>CORREO ELECTRONICO</p>
+                  <div class="form-label-group" style="position: relative; margin-bottom: 1rem; margin-bottom: 7%;">
+                    <input name="correo" type="email" id="inputEmail" class="form-control" style="height: auto; border-radius: 0rem;" placeholder="Email" required autofocus>
+                    <small class="text-danger"><font color="white">El email es obligatorio</font> </small>
+                  </div>
+                 <p><b>CONTRASEÑA</b></p>
+                 <div class="alert alert-info" role="alert">
+                  <small>señor usuario su contraseña debe ser mayor a 8 dijitos <br> utilizar caracteres especificos como letras y numeros (%,&,$) </small>
+                </div>
+                 <br>
+                  <div class="form-label-group" style="padding: var(--input-padding-y) var(--input-padding-x); margin-bottom: 7%;">
+                    <input name="pass" type="password" id="inputPassword" class="form-control" style="height: auto; border-radius: 0rem;" placeholder="Contraseña" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="password">CODIGO DEL GYM AL QUE PERTENECE: </label>
+                    <input name="codUser" type="codigo" class="form-control form-control-sm" placeholder="Escriba el codigo de su gimnasio">
+                  </div>
+                  <br>
+                  <div class="alert alert-info" role="alert">
+                    Señor usuario recuerde que el codigo de registro será enviado por parte del gimnasio al que se inscribio
+                    de igual forma te damos la bienvenidad a GYMAPP. 
+                  </div>
+                  <a class="btn btn-lg btn-block" style="background-color: #6451bda8; color: white;" > <input   type="submit" value="Registrame" ><font face="sans-serif"></font></a>
+                  
+                </div>
+                </form>
+            
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer style="color: #999985; padding-left: 8%; padding-right: 5%; padding-top: 2%; margin-top: 7%; backdrop-filter: brightness(0.3);"><font face="sans-serif" weight="normal">
+          <div class="row">
+              <div class="float-left col-6">
+                <p class="footer-top" style="text-align: left;" >
+                  <font color="gray">¿Preguntas? Llama al</font>
+                 <a class="footer-top-a" href=""><font color="blue">01 800 917 1564</font> </a><br>
+              </p>
+              </div>
+              <div class="float-right col-6">
+                  <p>GYMAPP</p>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-6">
+                <a href="..."><font color="gray">centro de ayuda</font></a><br>
+                <a href="..."> <font color="gray">terminos de uso</font></a>
+              </div>
+              <div class="col-6">
+                <a href="..."><font color="gray">contactanos</font></a><br>
+                <a href="..."> <font color="gray">privacidad</font> </a>
+              </div>
+          </div><br>
+          <div class="row">
+            <div class="col-6">
+                <img style="width: 20px;" src="https://image.flaticon.com/icons/svg/733/733547.svg" alt="">
+                <a href="..."><font color="gray">@oiajdf</font></a><br>
+                <img style="width:20px;" src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="">
+                <a href="..."> <font color="gray">@oiajdf</font></a><br>
+            </div><br>
+            <div class="col-6">
+                <img style="width: 20px;" src="https://image.flaticon.com/icons/svg/733/733579.svg" alt="">
+                <a href="..."><font color="gray">@oiajdf</font></a><br>
+                <img style="width: 20px;" src="https://image.flaticon.com/icons/svg/124/124034.svg" alt="">
+                    <a href="..."><font color="gray">3143356577</font></a><br>
+                
+            </div>
+          </div><br>
+      </footer>
+   
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</html>
