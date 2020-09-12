@@ -1,35 +1,21 @@
 <?php
 $con = New Conexion();
 
-$stmt= $con->query("SELECT codigo_gym_user FROM usuarios WHERE id=$id");
-$fila = $stmt->fetch_object();
 
-$codigo = $fila->codigo_gym_user;
+$consultaPublicacion = $con->query("SELECT p.id_publi,p.titulo,p.descripcion,p.imagen,p.fecha,u.id,g.id,g.nombre FROM publicaciones p 
+INNER JOIN usuarios u ON u.codigo_gym_user=p.codigo_gym 
+INNER JOIN usuarios g ON g.codigo_gym=u.codigo_gym_user
+WHERE u.id='$id'");
 
 
-$consultaPublicacion = $con->query("SELECT * FROM `publicaciones` WHERE codigo_gym = '$codigo'");
-
-$fila = $consultaPublicacion->fetch_object();
-
-$nombre = $fila->id_user;
-$id_publi = $fila->id_publi;
-
-$pmpt = $con->query("SELECT nombre FROM usuarios WHERE id = $nombre");
-
-$fila = $pmpt->fetch_object();
-
-$name = $fila->nombre;
-
-var_dump($id_publi);
 
 while($row = mysqli_fetch_array($consultaPublicacion)){
-
 ?>
 
 
     <div class="tarjeta">
         <div class="tarjeta-user" align="left">
-            <h5><?php echo $name?></h5>
+            <h5><?php echo $row['nombre'];?></h5>
             <h5><?php echo $row['fecha']?></h5>
         </div>
         <div class="tarjeta-imagen" align="left">
