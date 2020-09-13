@@ -15,6 +15,8 @@ while($row = mysqli_fetch_array($consultaPublicacion)){
 
     <div class="tarjeta">
         <div class="tarjeta-user" align="left">
+        <form method="POST" action="php/comentario.php">
+        <input type="text" value="<?php echo $row['id_publi']; ?>" name="id_publi" hidden> 
             <h5><?php echo $row['nombre'];?></h5>
             <h5><?php echo $row['fecha']?></h5>
         </div>
@@ -28,25 +30,17 @@ while($row = mysqli_fetch_array($consultaPublicacion)){
             <div class="descrip">
             <h3><?php echo $row['descripcion']?></h3>
             </div>
-            <div class="like">
-                <a href="" ><i class="fas fa-thumbs-up"></i> Likes()</a>
-            </div>
-            <div class="comentario">
-                <a href="" onclick="mostrar();"><i class="fas fa-comments"></i> Comentarios()</a>
+            <?php 
+            include("parents/com_like.php");
+            ?>
                 <div class="comentario_mostrar" id="mostrar_ocultar">
-                    <form method="POST">
                         <textarea name="comentario" placeholder="Comentario..."></textarea>
                         <br>
                         <input type="submit" value="Comentar" name="comentar">
                     </form>
-                    <?php
-                    include("php/comentario.php");
-                    ?>
-                </div>
             </div>
-            
         </div>
     </div>
     <br>
+    <?php }?>
 
-<?php }?>

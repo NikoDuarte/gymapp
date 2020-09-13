@@ -22,12 +22,10 @@ while($row = mysqli_fetch_array($consultaPublicacion)){
             <div class="descrip">
             <h3><?php echo $row['descripcion']?></h3>
             </div>
-            <div class="like">
-                <a href="" ><i class="fas fa-thumbs-up"></i> Likes()</a>
-            </div>
-            <div class="comentario">
-                <a href="" onclick="mostrar();"><i class="fas fa-comments"></i> Comentarios()</a>
-            </div>
+            <?php 
+                include("parents/com_like.php");
+                ?>
+
         </div>
     </div>
     <br>

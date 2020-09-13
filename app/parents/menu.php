@@ -3,10 +3,10 @@
           <img style="width: 60px;" src="https://i.ibb.co/7bxtrvw/GYMAPP-Convert-Image.png" alt="">
         </li>
         <li class="nav-item-active">
-          <a class="nav-link" href="#"><b>Informacion</b></a>
+          <a class="nav-link" href="index.php"><b>inicio</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><b>Informacion</b></a>
+          <a class="nav-link" href="informacion/info.php"><b>Informacion</b></a>
         </li>
         <?php
                   $con = New Conexion();
@@ -19,7 +19,7 @@
                     case 'Usuario':
                       echo "
                       <li class='nav-item'>
-                      <a class='nav-link' href='PAGO MENSUALIDAD GYM.php'><b>Mensualidad de su gimnasio</b></a>
+                      <a class='nav-link' href='pagos-tienda/mensualidad.php'><b>Mensualidad de su gimnasio</b></a>
                       </li>";
                       break;
                     
@@ -32,9 +32,9 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><b>TIENDA</b></a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="catal.ropa.php">ROPA</a>
-            <a class="dropdown-item" href="catl.accesori.php">ACCESORIOS</a>
-            <a class="dropdown-item" href="catal.vitamina.php">VITAMINAS </a>
+            <a class="dropdown-item" href="pagos-tienda/tienda-ropa.php">ROPA</a>
+            <a class="dropdown-item" href="pagos-tienda/tienda-accesorios.php">ACCESORIOS</a>
+            <a class="dropdown-item" href="pagos-tienda/tienda-vitaminas.php">VITAMINAS </a>
           </div>
         </li>
         <li class="nav-item">
