@@ -5,7 +5,7 @@ $con = New Conexion();
 $consultaPublicacion = $con->query("SELECT p.id_publi,p.titulo,p.descripcion,p.imagen,p.fecha,u.id,g.id,g.nombre FROM publicaciones p 
 INNER JOIN usuarios u ON u.codigo_gym_user=p.codigo_gym 
 INNER JOIN usuarios g ON g.codigo_gym=u.codigo_gym_user
-WHERE u.id='$id'");
+WHERE u.id='$id' ORDER BY p.id_publi DESC");
 
 
 

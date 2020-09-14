@@ -1,6 +1,6 @@
 <?php
 $con = New Conexion();
-$consultaPublicacion = $con->query("SELECT U.nombre,P.id_publi,P.titulo,P.descripcion,P.imagen,P.fecha FROM publicaciones P,usuarios U WHERE P.id_user=U.id AND P.id_user=$id AND P.codigo_gym = U.codigo_gym");
+$consultaPublicacion = $con->query("SELECT U.nombre,P.id_publi,P.titulo,P.descripcion,P.imagen,P.fecha FROM publicaciones P,usuarios U WHERE P.id_user=U.id AND P.id_user=$id AND P.codigo_gym = U.codigo_gym ORDER BY P.id_publi DESC");
 
 while($row = mysqli_fetch_array($consultaPublicacion)){
 

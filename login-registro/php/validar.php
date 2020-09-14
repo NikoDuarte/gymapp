@@ -46,7 +46,7 @@ if (isset($_POST['iniciar'])) {
                     ?>
                             <div class="cont" align="center">
                             <h3 class="ok">Bienvenido <?php echo $name?> te estamos redireccionando</h3>
-                            <!--<meta http-equiv="refresh" content="1.5;URL=">-->
+                            <meta http-equiv="refresh" content="1.5;URL=../app/index.php">
                             </div>
                     <?php
                     break;

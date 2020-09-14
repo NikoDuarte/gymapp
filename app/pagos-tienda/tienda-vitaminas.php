@@ -29,98 +29,34 @@
     </nav><br><br>
    
    <!--------------------------------------IMAGENES CATALOGO-------------------------------------------------->
-   <center><center><div style="width: 1000px;" class="card-deck">
+   <center><div style="width: 1000px;" class="card-deck">
     <div class="card">
-      <?php 	/*include("./conexionbd.php");  
+      <?php 	include("../../config/conexion.php");  
 											
 						$con = New Conexion();
-						$resultados = $con->query("SELECT imagen_producto FROM productos WHERE id_producto = '8'");
+						$resultados = $con->query("SELECT id_producto,imagen,nombre,precio,tipo FROM productos WHERE tipo = 'vitaminas' ");
 						while ($consulta = mysqli_fetch_array($resultados)) {
-							echo "<img  src='".$consulta ['imagen_producto']."' width='300' height='500' />";
+							echo "<img  src='".$consulta ['imagen']."' height='500' />";
 							
-						}*/
 			  ?>
       <div class="card-body">
-        <h5 class="card-title"><?php 	 
-								/*			
-                                            $resultados = $con->query("SELECT nombre_producto FROM productos WHERE id_producto = '8'");
-                                            while ($consulta = mysqli_fetch_array($resultados)) {
-                                                echo $consulta ['nombre_producto'];
-                                                
-                                            }*/
+        <h5 class="card-title"><?php 
+                                echo $consulta ['nombre'];
+                                            
                                   ?></h5>
         <p class="card-text"><font color="red">$<?php 	 
-									/*		
-                                            $resultados = $con->query("SELECT precio_producto FROM productos WHERE id_producto = '8'");
-                                            while ($consulta = mysqli_fetch_array($resultados)) {
-                                                echo $consulta ['precio_producto'];
-                                                
-                                            }*/
+											
+                                    echo $consulta ['precio'];
+                                  
+                                            
                                   ?></font> </p>
-        <a class="btn btn-primary" href="Comprar.php?cod=8" role="button">VER ARTICULO</a>
+        <a class="btn btn-primary" href="pagos.php?cod=<?php echo $consulta ['id_producto'];?>" role="button">VER ARTICULO</a>
       </div>
+      <?php }?>
     </div>
-    <div class="card">
-    <?php 
-									/*		
-                                            $resultados = $con->query("SELECT imagen_producto FROM productos WHERE id_producto = '9'");
-                                            while ($consulta = mysqli_fetch_array($resultados)) {
-                                                echo "<img  src='".$consulta ['imagen_producto']."' width='300' height='500' />";
-                                                
-                                            }*/
-                                  ?>
-        <div class="card-body">
-            <h5 class="card-title"><?php 	 
-										/*	
-                                            $resultados = $con->query("SELECT nombre_producto FROM productos WHERE id_producto = '9'");
-                                            while ($consulta = mysqli_fetch_array($resultados)) {
-                                                echo $consulta ['nombre_producto'];
-                                                
-                                            }*/
-                                  ?></h5>
-            <p class="card-text"><font color="red">$<?php 	 
-										/*	
-                                            $resultados = $con->query("SELECT precio_producto FROM productos WHERE id_producto = '9'");
-                                            while ($consulta = mysqli_fetch_array($resultados)) {
-                                                echo $consulta ['precio_producto'];
-                                                
-                                            }*/
-                                  ?></font> </p>
-            <a class="btn btn-primary" href="Comprar.php?cod=9" role="button">VER ARTICULO</a>
-          </div>
-      </div>
-    <div class="card">
-    <?php 
-										/*	
-                                            $resultados = $con->query("SELECT imagen_producto FROM productos WHERE id_producto = '10'");
-                                            while ($consulta = mysqli_fetch_array($resultados)) {
-                                                echo "<img  src='".$consulta ['imagen_producto']."' width='300' height='500' />";
-                                                
-                                            }*/
-                                  ?>
-        <div class="card-body">
-            <h5 class="card-title"><?php 	 
-										/*	
-                                            $resultados = $con->query("SELECT nombre_producto FROM productos WHERE id_producto = '10'");
-                                            while ($consulta = mysqli_fetch_array($resultados)) {
-                                                echo $consulta ['nombre_producto'];
-                                                
-                                            }*/
-                                  ?></h5>
-            <p class="card-text"><font color="red">$<?php 	 
-										/*	
-                                            $resultados = $con->query("SELECT precio_producto FROM productos WHERE id_producto = '10'");
-                                            while ($consulta = mysqli_fetch_array($resultados)) {
-                                                echo $consulta ['precio_producto'];
-                                                
-                                            }*/
-                                  ?></font> </p>
-        <a class="btn btn-primary" href="Comprar.php?cod=10" role="button">VER ARTICULO</a>
-      </div>
-    </div>
-  </div><br></center><br></center>
-
-  <br>
+    
+  </div><br>
+<br>
    <!--------------------------------------IMAGENES --->
   <!-------------------paginación------------------------------>
    <nav aria-label="Page navigation example">
